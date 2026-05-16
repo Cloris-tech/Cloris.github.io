@@ -1,0 +1,7 @@
+export { ClorisMark } from './ClorisMark'
+export { ContactSection } from './ContactSection'
+export { HeroSection } from './HeroSection'
+export { SiteFooter } from './SiteFooter'
+export { SiteHeader } from './SiteHeader'
+export { SkillsSection } from './SkillsSection'
+export { WorksSection } from './WorksSection'
