@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cloris 2.0 | Case Study Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2e3037",
+                    "secondary-fixed-dim": "#c6c6cb",
+                    "primary-fixed": "#d7e3ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#626267",
+                    "on-tertiary-container": "#ffe3d6",
+                    "inverse-primary": "#aac7ff",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-container-highest": "#e1e2eb",
+                    "primary-fixed-dim": "#aac7ff",
+                    "on-tertiary-fixed-variant": "#793000",
+                    "inverse-on-surface": "#eff0f9",
+                    "surface-bright": "#f9f9ff",
+                    "on-surface": "#191c22",
+                    "outline-variant": "#c1c6d5",
+                    "surface-container-low": "#f2f3fc",
+                    "on-primary-fixed-variant": "#00458e",
+                    "background": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#0066cc",
+                    "secondary": "#5d5e63",
+                    "primary": "#004e9f",
+                    "on-primary-fixed": "#001b3e",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e0dfe4",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "on-primary-container": "#dfe8ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e3e2e7",
+                    "surface-tint": "#005cba",
+                    "surface-container": "#ecedf6",
+                    "tertiary": "#883700",
+                    "on-surface-variant": "#414753",
+                    "on-secondary-fixed": "#1a1b1f",
+                    "tertiary-fixed": "#ffdbcb",
+                    "outline": "#727784",
+                    "surface-dim": "#d8d9e2",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8f1",
+                    "tertiary-fixed-dim": "#ffb692",
+                    "surface-variant": "#e1e2eb",
+                    "surface": "#f9f9ff",
+                    "on-background": "#191c22",
+                    "tertiary-container": "#af4900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; background-color: #f9f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .case-section { border-bottom: 1px solid #e1e2eb; }
+        .dashed-placeholder { border: 1.5px dashed #c1c6d5; background: #ffffff; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Cloris</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">首页</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">职场进化</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">作品</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">联系</a>
+</div>
+<div class="flex gap-4">
+<button class="px-4 py-2 text-primary font-label-md border border-primary rounded-lg hover:bg-primary/5 transition-all">EN</button>
+<button class="px-6 py-2 bg-primary text-on-primary font-label-md rounded-lg hover:bg-primary-container transition-all">Resume PDF</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+<!-- Case Study 1 -->
+<section class="case-section py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="text-primary font-label-sm uppercase tracking-widest mb-4">Case Study 01</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">JLR 员工智能助手</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        在大规模组织中利用大语言模型（LLM）重塑员工服务体验，从传统知识库向具备行动能力的智能代理转型。
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">hub</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">AI 架构与范式</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">集成 RAG 检索增强生成、CoT 思维链以及多维 Tool Calling，确保回答的逻辑性与实时性。</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">analytics</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">痛点与场景分析</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">基于“频次-复杂度矩阵”锁定核心场景，通过工程化手段解决 Qwen 知识库、HRM 系统与工单体系的深度集成。</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold">双维评测与风控</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">建立准确率与人工接管率的双重评估体系，平衡业务效率与内容合规风险。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-surface-container rounded-xl overflow-hidden aspect-[4/3] flex items-center justify-center relative">
+<img class="w-full h-full object-cover" data-alt="A futuristic and professional enterprise AI dashboard interface displaying complex RAG architectural flows and employee interaction statistics. The visual style is clean, corporate modern, with a palette of deep blues and crisp whites. High-key soft lighting emphasizes the sleek glassmorphism panels and data visualizations. The atmosphere is sophisticated and technologically advanced, reflecting an executive decision-making environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZoFAd8rkdIUqWGNLw1pG4sB27tZz4jeopzw8aPhR6i7euogvaBs-FErzqDjsiSzrfuraoLcB-pUepc1xPwhGDH5Nq_XMFzdavw5Q8vR8Est1L_P1HnAQWNU9-B701UWC4Zx-1L0MhwzYI-HETuEKWxbGkToMZ2g9r6kHUYY1MNtZDujFib2iod7szD17X4R_OyTFg7Ltsq18SUV9htNbB5AZv3EHE9xPBol6cfXT6RisDNRpFPcRq9qXaOMk69tvuUb2wvvNuo4E"/>
+</div>
+</div>
+</div>
+<div class="dashed-placeholder mt-16 p-12 rounded-xl flex items-center justify-center text-on-surface-variant font-label-md">
+<span class="flex items-center gap-2">🔍 查看 AI 智能代理功能链路与架构画布</span>
+</div>
+</section>
+<!-- Case Study 2 -->
+<section class="case-section py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="bg-surface-container rounded-xl overflow-hidden aspect-[16/10] flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A sophisticated data visualization screen showing unstructured voice data being converted into structured insights and operational metrics. The interface uses a minimalist corporate aesthetic with tech-blue accents and high-contrast typography. Soft studio lighting highlights the clean edges of the UI elements. The mood is one of clarity and professional intelligence, showcasing the bridge between raw communication and business analytics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB3bvKIuGh68Lnn622CiEM4YKK7i35Cbxh9zdIKlCmqyVClaaHKF1LFkZR9-Eekuqsw8xeE9Smr4b6KsqkcAgI7g0tXICHC8mDxTk0kxzinRBvN0ZqeobzVKFFhZIUV7FsxslcsQwoCvGHZMZRX2WoH8jqUe6midYEl8Slc_W7zqjezWZd966sXXzvwNHzlKv5Qr7tAFLQYgK2yP7vMgcJ-XzmrAPgga1Y96lJFCL3BxPwiIVlq-B_7TE89vijXuFRnlDyKLXCXRA"/>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center order-1 lg:order-2">
+<span class="text-primary font-label-sm uppercase tracking-widest mb-4">Case Study 02</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">销售域语音与 AIGC</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        通过 ASR + 语义理解 + 规则引擎与生成式 AI 的深度融合，攻克销售沟通过程中不可量化、难以回溯的业务痛点。
+                    </p>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant">
+<h4 class="font-label-md text-label-md font-bold mb-2">非结构化语音转数据</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">将原始通话记录转化为可运营、可管理的行为逻辑，打通业务、IT 与算法三方的协同壁垒。</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant">
+<h4 class="font-label-md text-label-md font-bold mb-2">生成式融合架构</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">利用 AIGC 技术自动生成销售摘要与改进建议，实现从实时监控到决策辅助的闭环。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="dashed-placeholder mt-16 p-12 rounded-xl flex items-center justify-center text-on-surface-variant font-label-md">
+<span class="flex items-center gap-2">🔍 查看非结构化数据转化与销售看板 UI</span>
+</div>
+</section>
+<!-- Case Study 3 -->
+<section class="py-20">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-primary font-label-sm uppercase tracking-widest mb-4 block">Case Study 03</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">复杂系统数字化转型</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    针对跨行业头部企业的系统性重构，涵盖政策产品化、战时指挥中心及合规治理体系。
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card A -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-8 flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">transform</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">增值服务数字化</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        VME 政策产品化重构，将复杂的后台规则转化为直观的一线作业工具，提升运营效能。
+                    </p>
+</div>
+<!-- Card B -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-8 flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">query_stats</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">War Room 平台</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        实现从 0 到 1 的孵化，管理千万级基金配置。打造支撑高层决策的实时数据指挥仓。
+                    </p>
+</div>
+<!-- Card C -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-8 flex flex-col h-full hover:border-primary transition-colors">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">头部车企与传统巨头</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        戴姆勒忠诚度计划体系构建；五粮液违规处理与渠道合规数字化治理（纯文本逻辑重塑）。
+                    </p>
+</div>
+</div>
+<div class="dashed-placeholder mt-16 p-12 rounded-xl flex items-center justify-center text-on-surface-variant font-label-md">
+<span class="flex items-center gap-2">🔍 查看千万级平台商业计划书框架与敏捷迭代路线图</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="w-full py-16 px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-8 max-w-container-max mx-auto">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mb-4">Cloris</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Cloris. Professional Portfolio</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">WeChat</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Xiaohongshu</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,54 +1,37 @@
-import { ClorisMark } from './ClorisMark'
+import { Link } from 'react-router-dom'
+
+import { publicAsset } from '../utils/publicUrl'
+
+const resumeHref = publicAsset('resume.pdf')
 
 export function HeroSection() {
   return (
-    <section className="hero" id="home">
-      <div className="hero__grid-bg" aria-hidden />
-      <div className="hero__inner">
-        <div className="hero__copy">
-          <p className="eyebrow">
-            <span className="material-symbols-outlined eyebrow__icon" aria-hidden>
-              verified_user
-            </span>
-            AI Agent &amp; Application Product Manager
-          </p>
-          <h1 className="hero__title">
-            Linking business boundaries, driving AI Agent from{' '}
-            <span className="text-gradient">0 to 1 implementation.</span>
-          </h1>
-          <p className="hero__lead">
-            985 engineering Master, IBM / Deloitte consulting background. Multi-million-dollar
-            product incubation and enterprise AI architecture — LLM, RAG, and tool-calling
-            end-to-end. Cross-functional delivery across algorithms, business, and legal, with
-            executive reporting experience.
-          </p>
-          <ul className="hero__bullets">
-            <li>
-              <span className="material-symbols-outlined" aria-hidden>
-                architecture
-              </span>
-              LLM · RAG · Agentic systems
-            </li>
-            <li>
-              <span className="material-symbols-outlined" aria-hidden>
-                analytics
-              </span>
-              Enterprise strategy &amp; governance
-            </li>
-          </ul>
-          <div className="hero__ctas">
-            <a className="btn btn--primary" href="#works">
-              View AI Works
-            </a>
-            <a className="btn btn--ghost" href="#contact">
-              Contact
-            </a>
+    <section className="hero-v3" id="home">
+      <div className="hero-v3__inner">
+        <div className="hero-v3__avatar-wrap">
+          <div className="hero-v3__avatar" aria-hidden>
+            <span className="hero-v3__avatar-mark">Y</span>
           </div>
+          <p className="hero-v3__avatar-hint muted">形象照占位 · LOGO 字标「Y」</p>
         </div>
-        <div className="hero__mark-wrap">
-          <div className="hero__mark-glow" aria-hidden />
-          <div className="hero__mark-ring">
-            <ClorisMark className="hero__mark" size={320} />
+        <div className="hero-v3__copy">
+          <div>
+            <h1 className="hero-v3__name">Cloris</h1>
+            <p className="hero-v3__role">AI 应用与复杂系统产品负责人</p>
+          </div>
+          <p className="hero-v3__slogan">
+            精准定义智能化场景，擅长通过 AI 技术重构复杂系统，驱动业务指标全链路闭环，为企业数字化转型提供决策底座。
+          </p>
+          <div className="hero-v3__ctas">
+            <a className="btn-v3 btn-v3--fill" href={resumeHref} download>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
+                download
+              </span>
+              下载简历
+            </a>
+            <Link className="btn-v3 btn-v3--outline" to="/case-studies">
+              查看作品集
+            </Link>
           </div>
         </div>
       </div>

@@ -1,124 +1,166 @@
-# Stitch prototype prompt — Cloris Personal Homepage 2.0
+# Stitch 原型提示词 — Cloris 个人主页 2.0
 
-Copy everything below the divider into Stitch (or your UI prototype tool) to generate **layout prototypes** for a personal portfolio. **Do not use photography or human imagery** (no headshots, avatars, or people). Rely on typography, the **letter “C”** mark, grids, lines, and UI structure only.
-
----
-
-## Role & output
-
-Generate a **desktop-first** (responsive implied) **personal homepage prototype** named conceptually **“Cloris Personal Homepage 2.0”** for an **AI Agent / AI Application Product Manager**. The tone is **high-end business + light tech**: restrained, credible, executive-ready—not playful or trendy-for-trend’s sake.
-
-**Hard constraint — no people imagery**
-
-- No portraits, avatars, silhouettes, or stock photos of humans.
-- A **large capital “C”** logomark (typographic / symbolic) is allowed as brand identity.
+复制 **下方「---」之后全部内容** 到 Stitch。  
+**仅此一版浅色（Light）风格**：不要求输出完整深色稿件；不出现整屏 `#121316` 铺底作为主背景（可作极细分隔，非主画布）。
 
 ---
 
-## Positioning & core copy
+## 角色与产出
 
-- **Identity tag:** AI Agent / AI Application Product Manager.
-- **Core slogan (hero):** “Linking business boundaries, driving AI Agent from **0 to 1** implementation.”
-- **Logo / domain motif:** Capital **“C”**.
+为高阶 **AI 应用 / 复杂系统产品负责人（ToB）** 生成概念 **「Cloris 个人主页 2.0」**：**高端商务 + 轻科技**、克制、可信。桌面优先。
 
----
+**需产出两套版面骨架（可多画板）：**
 
-## Personal traits (summary module — use for hero secondary / About intro)
-
-- **Background:** **985** engineering Master’s **+** top-tier consulting (**IBM / Deloitte**).
-- **Leadership:** Multi-**million-dollar** product **incubation** leadership; **enterprise-level AI** architectures.
-- **Technical depth:** End-to-end optimization across **LLM**, **RAG**, and **tool calling** (full-link).
-- **Delivery:** Cross-functional collaboration across **algorithm**, **business**, and **legal**; experience presenting to **senior management**.
+1. **落地页一：聚合主页** — **Minimalist Portfolio**（单页滚动 / 锚点导航）。  
+2. **落地页二：作品集与详情复盘 Hub** — **Case Study Hub**（含 **3** 个大案例长篇结构；从主页三张作品卡跳入或并列展示均可）。
 
 ---
 
-## Information architecture (sections)
+## 全局文案与品牌（两套落地页共通）
 
-Prototype should include clear sections (single-page scroll with anchor nav is fine).
+### 头像
 
-### Global navigation
+- Hero **左侧**：**高质感职场形象照**，或 **极简技术线条 Avatar**。
 
-- **Smooth anchor jumps** between sections.
-- Label suggestions: **Home** · **AI Works & Practice** · **Skills & Certifications** · **Contact** (or equivalent concise English).
+### 身份标签
 
-### 1) Home — Hero
+**「AI 应用与复杂系统产品负责人 （7+ 年 ToB 平台经验）」**
 
-- Dominant **“C”** mark and premium, minimal layout.
-- Short value proposition + primary actions (e.g. explore works, contact, resume—placeholders OK).
+### Slogan（新实用）
 
-### 2) AI Works & Practice (core module)
+**链接复杂业务，将 ASR、语义理解与大模型能力，工程化转化为高可用、可量化的企业级 AI 产品。**
 
-Organize as **distinct cards / clusters**:
+### LOGO / 域名视觉
 
-- **Enterprise Agent matrix**
-  - **Employee assistants** (**LLM + RAG**)
-  - **Distributor / dealer technical support** agent narrative
-- **Intelligent sales domain**
-  - **Chat BI**
-  - **Intelligent customer service** tooling (as a separate line item from Chat BI)
-- **Digital transformation**
-  - Cross-industry work: **Automotive**, **FMCG**, **Retail**
-  - Named anchors where specified: **Daimler**, **Wuliangye**, **JLR** (layout can show them as case tags / logos-as-text, not raster brand assets if avoiding images entirely—**text labels only** is safest)
+简报指定：**大写字母「Y」** 字标占位。若对外品牌与其它字母不一致，开发阶段替换为实际字标即可。
 
-Emphasize **outcomes**, **system complexity**, and **business impact** (use metric placeholders, not invented real numbers).
-
-### 3) Skill stack & certifications
-
-- **AI core:** Prompt strategies; **vector database** construction; **evaluation / performance measurement** systems.
-- **Project management:** **PMP**; **agile** iterative delivery.
-- **Badges / credentials:** **IBM Data Science**; **Enterprise Design Thinking** (present as credential chips or a compact strip).
-
-### 4) Contact
-
-- Channels: **WeChat**, **GitHub**, **Xiaohongshu (Red)** — as clearly labeled buttons or icon+text affordances (icons OK; no photos).
-- **Resume:** prominent **PDF download** entry point (“Resume (PDF)” or similar).
+**能力与人设叙事**由 **落地页一的「职场进化」时间轴** 承载，不再单独做四卡特质看板。
 
 ---
 
-## Visual style reference ([Design Prompts](https://www.designprompts.dev/))
+## 配色与交互 — **浅色唯一主稿**
 
-Use [Design Prompts](https://www.designprompts.dev/) as the **style vocabulary**. Favor presets that read as **professional + modern SaaS + restrained tech**, for example:
+| 用途 | 色值 | 说明 |
+|------|------|------|
+| 页面背景 | **`#FFFFFF`** | 主画布铺满 |
+| 主标题/正文 | **`#1A1A1A`** | 高可读 |
+| 品牌点缀 / 主 CTA | **`#0066CC`** |
+| 次要文字 / 分界线 | **`#8E8E93`** |
 
-- **Enterprise**, **SaaS**, **Modern Dark**, **Minimal Dark**, **Professional**
+卡片可轻微抬升：**`#F5F5F7`** 作浅底（可选）。  
 
-Adapt to the **exact palette** below—do **not** use the older “neon green on charcoal” direction.
-
----
-
-## Color system (must follow — minimalist professional)
-
-**Product direction:** “High-end business + light tech.” Support **dark / light** presentation (two modes or clearly separated artboards).
-
-| Role | Light mode | Dark mode |
-|------|------------|-----------|
-| Background | **Pure white** `#FFFFFF` | **Deep titanium gray** `#121316` |
-| Primary text | **Matte pure black** `#1A1A1A` | **Glacier white** `#F5F5F7` |
-| Accents | **Classic tech blue** `#0066CC` | same |
-| Secondary accent | **Deep cyan** `#008080` | same |
-| Secondary UI text / dividers | **Matte cold gray** `#8E8E93` | same (adjust opacity for dark bg if needed for contrast) |
-
-Use **tech blue** for primary CTAs and key emphasis; **cyan** sparingly for secondary highlights. Keep backgrounds and typography **clean and calm**.
+**极简动效**：区块间无缝轻渐隐过渡；逻辑卡保留 **极低噪「呼吸微光」**（细描边 / 渐变描边，`#0066CC`），**禁止娱乐化大开大合动效**。
 
 ---
 
-## Interaction & motion (professional restraint)
+## 落地页一 — 聚合主页（Minimalist Portfolio）
 
-- **Philosophy:** simplicity and **professional restraint**—no flashy gimmicks.
-- **Scrolling:** smooth scrolling.
-- **Transitions:** **seamless fade** between sections / on nav; explicitly **avoid** “old TV” scanline/wipe/cheap glitch effects.
-- **Buttons:** subtle **scale-up** (slight zoom) on hover.
-- **Cards (“logic cards”):** a subtle **“breathing”** animated border in **tech blue** (soft pulse or gentle opacity—not loud neon).
+### ① Hero（引人入胜）
+
+左侧头像；右侧：**姓名**、**身份标签**、**Slogan**。主操作：**「简历 PDF」快捷下载**。次操作：锚点跳到「职场进化」或作品矩阵。
+
+### ② 横向时间轴：7 年+ 职场进化史（全新必选模块）
+
+桌面端 **横向时间轴 / 鱼骨时间线 / 三节里程碑滑轨**（三选一皆可，但必须 **从左到右时间递增**）；移动端可收成 **纵向三段卡片**，信息层级保持一致。
+
+每组节点含：**时间段 + 雇主 | 头衔** → **一行核心定位（加粗或小标题）** → **两行内核心价值叙述**。
+
+**节点一｜2018.07 — 2021.05｜IBM 中国｜咨询顾问**
+
+- **核心定位**：数字化转型与蓝图设计基因。  
+- **核心价值**：大型企业数字化转型需求梳理与业务蓝图设计；协同跨职能团队推进数字化方案落地。
+
+**节点二｜2021.06 — 2023.05｜德勤数字科技｜资深产品经理**
+
+- **核心定位**：**0→1** 产品孵化与多客户标准化交付。  
+- **核心价值**：孵化 **War Room 数据决策平台**；撰写商业计划书并取得 **千万级（1000 万）产品孵化基金**。
+
+**节点三｜2023.06 — 至今｜捷豹路虎｜Lead & AI 产品经理**
+
+- **核心定位**：企业级 **AI Agent** 与复杂智能化系统操盘。  
+- **核心价值**：规划企业级 AI 应用整体架构；主导 **AI Agent 矩阵** 及 **语音 + AIGC** 类项目从方案设计到效果调优的全生命周期落地。
+
+时间轴主色线或节点强调可用 **`#0066CC`**，日期与雇主用 **`#1A1A1A` / `#8E8E93`** 区分层级。
+
+### ③ AI 核心项目矩阵 — **固定 3 张作品卡**
+
+点击后跳到 **落地页二** 对应段落（原型里可用「链接 / 第二张画板跳转」占位）。
+
+**卡 A｜JLR 员工智能助手**  
+概要：AI 全周期规划 + **LLM + RAG + Tool Calling** 落地效果描述（不下敏感真实数值时可用占位 KPI）。
+
+**卡 B｜智能销售与展厅**  
+概要：**ASR + 语义理解 + 规则引擎** 在 **汽车零售** 的工程化转化。
+
+**卡 C｜复杂系统数字化转型**  
+概要：**千万级数据平台**孵化 + **大厂增值服务 / 数字化转型**成果（占位表述，勿杜撰机密数据）。
+
+### ④ 能力栈与职业认证（背书区）
+
+- **技术与算法**：Prompt / 向量库构建 / AI 与业务 **双维评测体系**。  
+- **项目管理与徽章**：**PMP** / 敏捷迭代 / **IBM Data Science** 与设计思维认证等（用文字 Chip，勿依赖未授权图形商标）。
+
+### ⑤ 联络与尾部（转化区）
+
+**微信 · GitHub · 小红书** 入口按钮；**邮箱**占位；单行 **在职/求职状态** 说明。
+
+全局导航示例：**首页 · 职场进化 · 作品 · 联系**（或等价短标签），锚点平滑滚动。
 
 ---
 
-## Deliverables from Stitch
+## 落地页二 — Case Study Hub（三组案例复盘）
 
-- Coherent prototype: **Hero + Works + Skills/Certs + Contact** with **nav** and **resume download** module.
-- **No people photos.** Decorative visuals only if abstract (grids, thin lines, subtle chart chrome **without** fake numeric claims).
-- Optional: show **both** light and dark theme variants to validate the palette.
+每组结尾保留 **作品集可视化留白**（虚线框 + 🔍说明），供后续插图/架构画布。
 
 ---
 
-## Microcopy tone (English UI)
+### Case ① JLR 员工智能助手
 
-Crisp, confident, outcome-oriented. Prefer *ship*, *land*, *scale*, *govern*, *measure*, *evaluate* over hype adjectives.
+1. **AI 架构与范式定位**：**认知层 RAG + 规划层 CoT + 执行层 Tool Calling**。  
+2. **痛点与场景定义**：基于 **频次-复杂度矩阵**锁定 **政策查询、费用报销、IT 自助** 等高价值切入。  
+3. **技术工程化实现**：**Qwen（或占位「基座模型」）** 向量化 **企业知识库**；打通 **HRM 与工单** 核心系统。  
+4. **双维评测体系**：模型侧（准确率 / 任务完成率 / **接管率** 等占位）+ 业务侧指标；闭环 **Bad Case** 调优。  
+5. **跨职能决策与风控**：统筹干系人，**安全合规** 下保障 **高可用交付**。
+
+留白：**🔍 查看 AI 智能代理功能链路与架构画布**（预留位置）。
+
+---
+
+### Case ② 销售域语音与 AIGC 智慧展厅
+
+1. **AI 架构与范式**：**ASR + 语义理解 + 规则引擎 + 生成式 AI** 融合架构。  
+2. **痛点与场景**：攻克汽车零售场景 **沟通不可量化** 痛点；支撑从「只看结果」到「能管过程」的升级叙事。  
+3. **工程化**：非结构化 **语音→可管理数据**；意向等级 / 开口项命中等 **可运营管理**逻辑（占位说明）。  
+4. **跨职能交付**：业务、IT、算法协同；**多门店** 交付与推广。
+
+留白：**🔍 查看非结构化数据转化与销售看板 UI**。
+
+---
+
+### Case ③ 复杂系统数字化转型（ToB 平台与经营决策）
+
+以 **三节小标题卡片**展开即可：
+
+**A.** **增值服务数字化转型**：复杂 **VME 政策产品化**，打通 **发放 / 核销 / 结算** 闭环。  
+
+**B.** **War Room 数据决策平台**：**0→1** 孵化、「千万级量级」基金故事线占位；**经营 / 风控大屏**示意图位。  
+
+**C.** **头部车企与传统巨头**：**戴姆勒车主忠诚度计划**、**五粮液控盘分利/层层扫码违规处理** —— **仅以文字 Chip 占位**，不出现未授权 Logo。
+
+留白：**🔍 查看千万级平台商业计划书框架与敏捷迭代路线图**。
+
+---
+
+## Stitch 硬性清单
+
+1. ✅ **浅色主稿唯一** — 不出现整屏深色作为主背景的需求。  
+2. ✅ Hero **左头像**；含 **三段职场进化横向时间轴**（信息逐字可追溯上文节点）。  
+3. ✅ **三卡矩阵**固定；Hub **三案例**结构与留白一致。  
+4. ✅ **色盘**严格：`#FFFFFF` / `#0066CC` / `#8E8E93` / 主文字 `#1A1A1A`。  
+5. ✅ 配图位用 **占位框**，拒绝虚构机密数据与未授权图形商标。
+
+---
+
+## 微文案气质（中文）
+
+笃定、务实、工程化语感；少用口号形容词，多写闭环、指标体系、合规、规模化。

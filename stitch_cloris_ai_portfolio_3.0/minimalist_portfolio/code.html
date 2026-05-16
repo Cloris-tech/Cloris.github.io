@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#2e3037",
+                    "secondary-fixed-dim": "#c6c6cb",
+                    "primary-fixed": "#d7e3ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#626267",
+                    "on-tertiary-container": "#ffe3d6",
+                    "inverse-primary": "#aac7ff",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-container-highest": "#e1e2eb",
+                    "primary-fixed-dim": "#aac7ff",
+                    "on-tertiary-fixed-variant": "#793000",
+                    "inverse-on-surface": "#eff0f9",
+                    "surface-bright": "#f9f9ff",
+                    "on-surface": "#191c22",
+                    "outline-variant": "#c1c6d5",
+                    "surface-container-low": "#f2f3fc",
+                    "on-primary-fixed-variant": "#00458e",
+                    "background": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#0066cc",
+                    "secondary": "#5d5e63",
+                    "primary": "#004e9f",
+                    "on-primary-fixed": "#001b3e",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e0dfe4",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#46464b",
+                    "on-primary-container": "#dfe8ff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#e3e2e7",
+                    "surface-tint": "#005cba",
+                    "surface-container": "#ecedf6",
+                    "tertiary": "#883700",
+                    "on-surface-variant": "#414753",
+                    "on-secondary-fixed": "#1a1b1f",
+                    "tertiary-fixed": "#ffdbcb",
+                    "outline": "#727784",
+                    "surface-dim": "#d8d9e2",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8f1",
+                    "tertiary-fixed-dim": "#ffb692",
+                    "surface-variant": "#e1e2eb",
+                    "surface": "#f9f9ff",
+                    "on-background": "#191c22",
+                    "tertiary-container": "#af4900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #ffffff; color: #191c22; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .logic-card { background: #F5F5F7; border: 1px solid #E5E5EA; transition: border-color 0.3s ease; }
+        .logic-card:hover { border-color: #0066CC; }
+        .timeline-line { background: linear-gradient(90deg, #0066CC 0%, #E5E5EA 100%); }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md font-label-md text-label-md sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Cloris</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">首页</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">职场进化</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">作品</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">联系</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors px-3 py-1">EN</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold hover:scale-95 transition-transform duration-200">Resume PDF</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop">
+<!-- Hero Section -->
+<section class="py-24 flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 flex justify-center md:justify-start">
+<div class="relative w-80 h-80 rounded-full bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Cloris Professional Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhIo9ZGsmGV4rWh44YdwiFo6ej3PtP5OAmNCrm-QriLdj58fhlvl1cmGUX9XR4Cp2RzpR8Kie0rAENf0Q2bQ7XoYD--UeP6VFLmkmKCnLpvU0vy2Q7FYEGqHP8Np-KU8rZEqSSfvjyF4Nfc-lptxC72Pufvci8WOMyQuWIWSDfgBZW0nxu1yMDQhXHclKi-CXtSgJnPZdp5bazq1D0SsNWuz5xekWnUHUKTddv590bZhGJNe3FxLPwB76Q"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col items-start gap-6">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-2">Cloris</h1>
+<p class="font-headline-md text-headline-md text-primary-container">AI 应用与复杂系统产品负责人</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    精准定义智能化场景，擅长通过 AI 技术重构复杂系统，驱动业务指标全链路闭环，为企业数字化转型提供决策底座。
+                </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+                        下载简历
+                    </button>
+<button class="border border-primary-container text-primary-container px-8 py-3 rounded-lg font-bold hover:bg-surface-container-low transition-colors">
+                        查看作品集
+                    </button>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-24 border-t border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">7 年+ 职场进化史</h2>
+<div class="relative pt-12">
+<div class="absolute top-[52px] left-0 w-full h-0.5 timeline-line hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- IBM -->
+<div class="relative flex flex-col gap-6">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-surface-container shadow-[0_0_0_8px_rgba(0,78,159,0.1)] z-10 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">2018.07 — 2021.05</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">IBM 中国</h3>
+<p class="font-label-md text-label-md text-primary-container font-bold">咨询顾问</p>
+</div>
+<div class="logic-card p-6 rounded-xl flex flex-col gap-4">
+<p class="font-body-md text-body-md font-bold text-on-surface border-b border-outline-variant pb-2">数字化转型与蓝图设计基因</p>
+<p class="font-body-md text-body-md text-on-surface-variant">主导多个 500 强客户需求梳理与业务蓝图设计，确保数字化转型方案从战略到落地的全过程完整性。</p>
+</div>
+</div>
+<!-- Deloitte -->
+<div class="relative flex flex-col gap-6">
+<div class="w-4 h-4 rounded-full bg-primary-container border-4 border-surface-container shadow-[0_0_0_8px_rgba(0,102,204,0.1)] z-10 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">2021.06 — 2023.05</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">德勤数字科技</h3>
+<p class="font-label-md text-label-md text-primary-container font-bold">资深产品经理</p>
+</div>
+<div class="logic-card p-6 rounded-xl flex flex-col gap-4">
+<p class="font-body-md text-body-md font-bold text-on-surface border-b border-outline-variant pb-2">0→1 产品孵化与多客户交付</p>
+<p class="font-body-md text-body-md text-on-surface-variant">成功孵化 War Room 数据决策平台，协助部门获得千万级产品孵化基金，实现标准化产品的高效交付。</p>
+</div>
+</div>
+<!-- JLR -->
+<div class="relative flex flex-col gap-6">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-surface-container shadow-[0_0_0_8px_rgba(0,78,159,0.1)] z-10 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">2023.06 — 至今</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">捷豹路虎</h3>
+<p class="font-label-md text-label-md text-primary-container font-bold">Lead &amp; AI 产品经理</p>
+</div>
+<div class="logic-card p-6 rounded-xl flex flex-col gap-4">
+<p class="font-body-md text-body-md font-bold text-on-surface border-b border-outline-variant pb-2">企业级 AI Agent 与复杂系统</p>
+<p class="font-body-md text-body-md text-on-surface-variant">规划企业级 AI 应用整体架构，统筹 LLM、RAG 及 Agent 应用的全生命周期落地，重构内部协作流。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Project Matrix -->
+<section class="py-24 border-t border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-16">AI Project Matrix</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="logic-card p-8 rounded-xl border-2 flex flex-col gap-6 hover:border-primary-container transition-all group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform">neurology</span>
+<span class="bg-surface-container-highest text-on-surface px-3 py-1 rounded text-label-sm font-bold">ACTIVE</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">JLR 员工智能助手</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">LLM</span>
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">RAG</span>
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">Tool Calling</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                        端到端的 AI 产品全周期规划，从底层模型选型到上层业务逻辑闭环，构建企业级智能体生态。
+                    </p>
+</div>
+<!-- Project 2 -->
+<div class="logic-card p-8 rounded-xl border-2 flex flex-col gap-6 hover:border-primary-container transition-all group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform">keyboard_voice</span>
+<span class="bg-surface-container-highest text-on-surface px-3 py-1 rounded text-label-sm font-bold">RETAIL</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">语音 + AIGC 应用</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">ASR</span>
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">NLU</span>
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">Rules Engine</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                        针对汽车零售场景，结合 ASR 语音识别与 AIGC 语义理解，通过复杂的规则引擎优化到店转化效率。
+                    </p>
+</div>
+<!-- Project 3 -->
+<div class="logic-card p-8 rounded-xl border-2 flex flex-col gap-6 hover:border-primary-container transition-all group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform">hub</span>
+<span class="bg-surface-container-highest text-on-surface px-3 py-1 rounded text-label-sm font-bold">DATA</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">复杂系统数字化转型</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">B-Side</span>
+<span class="px-2 py-0.5 bg-outline-variant/20 rounded text-[10px] font-bold text-on-surface-variant">Big Data</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                        主导千万级数据平台孵化，打通多维度业务数据链路，为大型组织提供增值服务与决策支持。
+                    </p>
+</div>
+</div>
+</section>
+<!-- Credentials Section -->
+<section class="py-24 border-t border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">技能与认证</h2>
+<div class="flex flex-wrap gap-4">
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">Prompt Craft</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">Vector DB</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">Dual Evaluation</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">PMP</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">Agile</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">IBM Data Science</span>
+<span class="bg-surface-container-low border border-outline-variant px-5 py-2 rounded-full font-label-md text-on-surface hover:border-primary transition-colors cursor-default">Design Thinking</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant mt-24">
+<div class="w-full py-16 px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-8 max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">Cloris</div>
+<div class="flex items-center gap-2 text-primary-container font-label-md">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+                    Currently In-office
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    专注 AI 应用全生命周期规划与复杂业务系统的数字化重构。
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">© 2024 Cloris. Professional Portfolio</p>
+</div>
+<div class="grid grid-cols-2 gap-x-16 gap-y-4">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Connect</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">WeChat</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Xiaohongshu</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Inquiry</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors focus:underline decoration-2 underline-offset-4" href="mailto:cloris@example.com">Email</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,41 +1,28 @@
 const chips = [
-  { icon: 'analytics', label: 'IBM Data Science' },
-  { icon: 'groups', label: 'Enterprise Design Thinking' },
-  { icon: 'inventory_2', label: 'PMP · agile delivery' },
-  { icon: 'database', label: 'Vector DB construction' },
-  { icon: 'psychology', label: 'Prompt · RAG · evaluation' },
+  'Prompt Craft',
+  'Vector DB',
+  'Dual Evaluation',
+  'PMP',
+  'Agile',
+  'IBM Data Science',
+  'Design Thinking'
 ]
 
 export function SkillsSection() {
   return (
-    <section className="section" id="skills">
-      <div className="section__container">
-        <div className="skills-divider-head">
-          <div className="skills-divider-head__line" />
-          <p className="skills-divider-head__label">Expertise &amp; accreditation</p>
-          <div className="skills-divider-head__line" />
-        </div>
-        <p className="section__subtitle section__subtitle--center">
-          Prompt strategy, vector databases, and performance evaluation systems. PMP-certified with
-          agile iteration practice.
+    <section className="credential-strip" id="skills">
+      <div className="credential-strip__container">
+        <h2 className="credential-strip__title">技能与认证</h2>
+        <p className="credential-strip__subtitle muted">
+          技术与算法栈：Prompt 策略 / 向量库构建 / AI 与业务双维评测；项目管理与方法论认证。
         </p>
-        <div className="chip-row">
-          {chips.map((c) => (
-            <div key={c.label} className="chip">
-              <span className="material-symbols-outlined chip__icon">{c.icon}</span>
-              <span>{c.label}</span>
-            </div>
+        <ul className="credential-strip__chips" role="list">
+          {chips.map((label) => (
+            <li key={label}>
+              <span className="credential-chip">{label}</span>
+            </li>
           ))}
-        </div>
-        <div className="skills-chart" aria-hidden>
-          {[12, 24, 16, 20, 28, 14, 32, 18, 12].map((h, i) => (
-            <div
-              key={i}
-              className="skills-chart__bar"
-              style={{ height: `${Math.min(h * 3, 96)}px` }}
-            />
-          ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

@@ -1,107 +1,62 @@
+import { Link } from 'react-router-dom'
+
+const projects = [
+  {
+    icon: 'neurology',
+    title: 'JLR 员工智能助手',
+    badge: 'ACTIVE',
+    tags: ['LLM', 'RAG', 'Tool Calling'],
+    body: '端到端的 AI 产品全周期规划，从底层模型选型到上层业务逻辑闭环，构建企业级智能体生态。'
+  },
+  {
+    icon: 'keyboard_voice',
+    title: '语音 + AIGC 应用',
+    badge: 'RETAIL',
+    tags: ['ASR', 'NLU', 'Rules Engine'],
+    body: '针对汽车零售场景，结合 ASR 语音识别与 AIGC 语义理解，通过复杂的规则引擎优化到店转化效率。'
+  },
+  {
+    icon: 'hub',
+    title: '复杂系统数字化转型',
+    badge: 'DATA',
+    tags: ['B-Side', 'Big Data'],
+    body: '主导千万级数据平台孵化，打通多维度业务数据链路，为大型组织提供增值服务与决策支持。'
+  }
+]
+
 export function WorksSection() {
   return (
-    <section className="section section--alt" id="works">
-      <div className="section__container">
-        <div className="section__head">
-          <div>
-            <h2 className="section__title">AI Works &amp; Practice</h2>
-            <p className="section__subtitle">
-              Enterprise agents, intelligent sales, and cross-industry digital transformation.
-            </p>
-          </div>
-          <div className="tag-row">
-            <span className="tag">Automotive</span>
-            <span className="tag">FMCG</span>
-            <span className="tag">Retail</span>
-          </div>
-        </div>
-
-        <div className="works-grid">
-          <article className="logic-card">
-            <div className="logic-card__top">
-              <div className="icon-tile icon-tile--primary">
-                <span className="material-symbols-outlined">hub</span>
+    <section className="works-matrix" id="works">
+      <div className="works-matrix__container">
+        <h2 className="works-matrix__title">AI Project Matrix</h2>
+        <div className="works-matrix__grid">
+          {projects.map((p) => (
+            <article key={p.title} className="logic-card-v3 logic-card-v3--tall">
+              <div className="logic-card-v3__head">
+                <span className="material-symbols-outlined logic-card-v3__icon">{p.icon}</span>
+                <span className="logic-card-v3__badge">{p.badge}</span>
               </div>
-              <span className="mono-label">Framework: multi-agent</span>
-            </div>
-            <h3 className="logic-card__title">Enterprise Agent Matrix</h3>
-            <p className="logic-card__body">
-              Employee assistants (LLM + RAG) and distributor technical support — bridging legacy
-              systems with modern agent capabilities.
-            </p>
-            <ul className="logic-card__list">
-              <li>
-                <span className="material-symbols-outlined check">check_circle</span>
-                <div>
-                  <strong>Employee assistants</strong>
-                  <span className="muted">Internal knowledge &amp; task orchestration.</span>
+              <div>
+                <h3 className="logic-card-v3__title">{p.title}</h3>
+                <div className="logic-card-v3__tags">
+                  {p.tags.map((t) => (
+                    <span key={t} className="logic-card-v3__tag">
+                      {t}
+                    </span>
+                  ))}
                 </div>
-              </li>
-              <li>
-                <span className="material-symbols-outlined check">check_circle</span>
-                <div>
-                  <strong>Distributor support</strong>
-                  <span className="muted">Scaled service for complex dealer networks.</span>
-                </div>
-              </li>
-            </ul>
-          </article>
-
-          <article className="logic-card">
-            <div className="logic-card__top">
-              <div className="icon-tile icon-tile--cyan">
-                <span className="material-symbols-outlined">insights</span>
               </div>
-              <span className="mono-label">Stack: RAG · evaluation</span>
-            </div>
-            <h3 className="logic-card__title">Intelligent Sales Domain</h3>
-            <p className="logic-card__body">
-              Chat BI and intelligent customer service — natural-language analytics and consistent
-              brand-voice engagement.
-            </p>
-            <ul className="logic-card__list">
-              <li>
-                <span className="material-symbols-outlined check check--cyan">check_circle</span>
-                <div>
-                  <strong>Chat BI</strong>
-                  <span className="muted">NL querying for sales &amp; ops metrics.</span>
-                </div>
-              </li>
-              <li>
-                <span className="material-symbols-outlined check check--cyan">check_circle</span>
-                <div>
-                  <strong>Intelligent customer service</strong>
-                  <span className="muted">High-precision responses with policy alignment.</span>
-                </div>
-              </li>
-            </ul>
-          </article>
+              <p className="logic-card-v3__body">{p.body}</p>
+            </article>
+          ))}
         </div>
-
-        <div className="works-banner">
-          <div>
-            <span className="mono-label mono-label--upper">Digital transformation exposure</span>
-            <div className="works-banner__names">
-              <span>Daimler</span>
-              <span>Wuliangye</span>
-              <span>JLR</span>
-            </div>
-          </div>
-          <div className="works-banner__divider" aria-hidden />
-          <div>
-            <span className="mono-label mono-label--upper">Program scale</span>
-            <p className="works-banner__metric">Multi-million-dollar portfolio</p>
-          </div>
-        </div>
-
-        <div className="works-accent">
-          <div className="works-accent__pattern" aria-hidden />
-          <div className="works-accent__content">
-            <h4 className="works-accent__title">From LLM capability to measurable ROI</h4>
-            <p className="works-accent__text muted">
-              Systematic product frameworks, technical governance, and outcome-oriented delivery.
-            </p>
-          </div>
+        <div className="works-matrix__more">
+          <Link className="btn-v3 btn-v3--fill" to="/case-studies">
+            进入案例复盘 Hub
+            <span className="material-symbols-outlined" aria-hidden>
+              arrow_forward
+            </span>
+          </Link>
         </div>
       </div>
     </section>
